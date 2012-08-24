@@ -7,9 +7,27 @@
   <%= csrf_meta_tag %>
 </head>
 <body style="">
-  <h1>My Posts</h1>
-		<%= yield %>
-
- 
+<div>
+	<div id="wrap_box" style="width:80%; margin:0 auto;">
+		<div class="hero-unit">
+	    	<h1>Rails Blog</h1>
+	    	<p>My first application in Ruby on Rails</p>
+	    	<p>
+	    		<%= link_to 'My Blog', posts_path ,:class=>"btn btn-primary btn-large"%>
+	   	 	</p>
+	    </div>
+	     <div class="navbar">
+		    <div class="navbar-inner">
+		    <a class="brand" href="#">Nav</a>
+		    <ul class="nav">
+			    <li ><%= link_to 'Home', root_path %></li>
+			    <li ><%= link_to 'My Blog', posts_path %></li>
+			    <li ><%= link_to 'New Post', new_post_path %></li>
+		    </ul>
+		    </div>
+	    </div>
+			<%= yield %>
+	 </div>
+</div>
 </body>
 </html>
