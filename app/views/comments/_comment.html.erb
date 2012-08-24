@@ -1,0 +1,17 @@
+<div class="row-fluid">
+  <hr style="clear:both; width:100%"/>
+    <div class="span3">
+    	<b>Commenter:</b>
+  		<%= comment.commenter %>
+    </div>
+    <div class="span5">
+    	<b>Comment:</b>
+  		<%= comment.body %>
+    </div>
+    <div class="span2">
+      <%= link_to 'Destroy Comment', [comment.post, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+    </div>
+    <hr style="clear:both; width:100%"/>
+</div>
